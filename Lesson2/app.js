@@ -56,6 +56,42 @@ console.log(msg);
  */
 
 
+/* var dataType_Boolean = true;
+dataType_Boolean = false;
+dataType_Boolean = 3>4;
+dataType_Boolean = 2 == 3;
+dataType_Boolean = 3 == '3' //true
+dataType_Boolean = Boolean(0); //false
+dataType_Boolean = Boolean(-0) // false
+dataType_Boolean = Boolean('0'); //true
+dataType_Boolean = Boolean(' '); // true
+dataType_Boolean = Boolean(null) // false
+console.log(dataType_Boolean);
+console.log(typeof dataType_Boolean); */
+
+
+/* var dataType_Null = null;
+console.log(typeof null); //object */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* console.log('%c Hello Full Stack! ', 'background: #840A7F ; color: #fff'); //renkli console için */
@@ -65,3 +101,6 @@ console.log(msg);
 
 console.log("%cClarusway %s", css, 'Reinvent yourself');
 */
+
+
+
