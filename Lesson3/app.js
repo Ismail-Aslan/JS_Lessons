@@ -139,3 +139,20 @@ var a1 = 3>2;
 console.log("var a1 = 3>2 -->",a1);
 console.log("");
 console.log("");
+
+// .length --> stringin uzunluğunu verir
+// .includes('_') --> stringin birşeyi içerip içermediğini verir
+
+var password = "password"
+console.log('var password = "password"');
+console.log('password.length > 5 && password.includes("ss") --> ',password.length > 5 && password.includes("ss"));
+
+console.log("");
+console.log("");
+
+//NULLISH OPERATOR --> ??
+
+// Sol taraf false null yada undefined ise sağ tarafı döndürür aksi halde sol tarafı veriyor
+
+var d1 = null;
+console.log("var d1 = null , d1 ?? 1 :  ",d1 ?? 1);
