@@ -109,3 +109,33 @@ console.log(003 != 3);//true
 ******************** */
 console.log("003+023                           --> ",003+023);//cevabı 22dir
 console.log("'c'.charCodeAt() --> ASCİİ code   --> ",'c'.charCodeAt());
+
+
+console.log("");
+
+var n1 = 2;
+var n2 = "2";
+console.log("n1 : ",n1,"n2 : ",n2);
+console.log("n1+n2 = ",n1+n2); /* srting + number = string */
+console.log("n2+n1 = ",n2+n1); 
+console.log("n1-n2 = ",n1-n2);/* strng -number = number */
+
+// LOGICAL OPERATORS
+console.log("");
+var n1 = 2;
+var n2 = "2";
+console.log("n1 : ",n1,"n2 : ",n2);
+console.log("&& --> and");
+console.log("n1 == 2 && n2 == 3 :  ",n1 == 2 && n2 == 3);
+
+console.log("|| --> or");
+console.log("n1 == 2 || n2 == 3 :  ",n1 == 2 || n2 == 3);
+
+console.log("|| --> or");
+console.log("!(n1 == 2 || n2 == 3) :  ",!(n1 == 2 || n2 == 3));
+
+console.log("");
+var a1 = 3>2;
+console.log("var a1 = 3>2 -->",a1);
+console.log("");
+console.log("");
