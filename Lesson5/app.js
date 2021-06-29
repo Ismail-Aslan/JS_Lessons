@@ -85,10 +85,67 @@ for (let i = 0, j = brand.length ; i < brand.length; i++,j--){
 console.log("\n\n\n");
 
 
+
 let bests = ["Clarusway", "Google", "Amazon", "IBM"]
 
 for(let i = 0; i < bests.length; i++){
 
     document.write("<p>",i+1," : ",bests[i],"</p>")
 
+}
+
+console.log("\n\n\n");
+
+
+
+console.log('******************** "break  &  continue" statement *******************\n\n');
+
+
+for (let i = 0; i < 10; i++) {
+    
+    console.log(i);
+
+    if (i===6) {
+        console.log("break");
+        break;
+    }
+    
+}
+
+console.log("\n\n\n");
+
+
+for (let i = 0; i < 10; i++) {
+    
+    console.log(i);
+
+    if (i===6) {
+        console.log("break");
+        break;
+    }else{
+        continue;
+    }
+    
+}
+
+
+console.log("\n\n\n");
+
+let text = "clarusway", newText = "";
+
+for (let i = text.length; i >0 ; i--) {
+   
+    newText += text[i-1]
+    
+}
+
+console.log(newText,"\n\n\n");
+
+
+for (let i = 1; i < 11; i++) {
+    for (let j = 1; j < 11; j++) {
+        document.write(`<p> ${i} x ${j} = ${i*j}</p>`)
+        
+    }
+    document.write("<br>")
 }
