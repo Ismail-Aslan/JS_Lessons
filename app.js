@@ -133,7 +133,7 @@ console.log(pascalNumber2(4));
 
 //**************************************************** */
 
-//Immediately invoked funtion expression
+//Immediately invoked function expression
 
 //fonksiyon sadece 1 kez çalışıyorsa kullanılır
 
@@ -157,3 +157,21 @@ console.log(result);
     }
     console.log("Result : ",sum);
 })(4);
+
+
+
+console.log("\n\n\n\n");
+//******************************************************** */
+
+//Arrow Function
+
+const multi = (x,y) => x * y;
+console.log(multi(3,5));
+
+
+const multi2 = (x,y) => {
+    let c = x*y;
+    return c;
+}
+
+console.log(multi2(3,5));
