@@ -175,3 +175,32 @@ const multi2 = (x,y) => {
 }
 
 console.log(multi2(3,5));
+
+
+
+
+let user = "Ali";
+const sayHi3 = (xxx = "New User") => `Welcome ${xxx}`;
+console.log(sayHi3(user));
+console.log(sayHi3());
+
+
+
+
+// Zero division Error
+// const div = (num1,num2) => num1 /num2;
+/* const div = (num1,num2) => {
+    if(num2 === 0){
+        return 'Zero Division';
+    }
+    return num1/num2
+} */
+​
+/* const div = (num1,num2) => num2 ? num1 / num2 :'Zero division Error!'
+​
+​
+​
+console.log(div(18,2));
+ */
+
+
