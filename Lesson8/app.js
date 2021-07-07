@@ -30,3 +30,11 @@ console.log(cars+cars2); //string olarak işlem yapıyor
 console.log([1,52,21,13,255].sort());
 console.log([1,52,21,13,255].sort(function(a,b){return a-b}));//sayılarla ilgili sıkıntıyı çözüyor
 
+//push()--> arrayin sonuna ekleme yapıyor
+//pop()--> arrayin son elemanını siliyor.Parametre almaz
+
+console.log(cars.push('Renault'));//********** */
+console.log(cars);
+
+console.log(cars.pop());//******** */
+console.log(cars);
