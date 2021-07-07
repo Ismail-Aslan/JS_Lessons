@@ -90,4 +90,11 @@ console.log(cars);
 
 console.log(cars.indexOf('VW'));
 console.log(cars.indexOf('VW',2));
+console.log(cars.indexOf('DDD',2));
 
+
+
+//lastIndexOf() -->indexof methodunu sağdan sola doğru yapar
+
+console.log(cars.lastIndexOf('VW'));
+console.log(cars.lastIndexOf('VW',2));
