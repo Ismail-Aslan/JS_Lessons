@@ -74,3 +74,13 @@ console.log(cars);
 console.log(cars);
 console.log(cars.slice(1,3));
 console.log(cars.slice(-3,3));
+console.log(cars.slice(-3,0)); // sola doğru gitmez, her zaman sağa doğru okur
+
+
+
+// reverse() --> son indexte başa doğru arrayi ters çevirir. Array değişir.
+
+
+console.log(cars);
+console.log(cars.reverse());
+console.log(cars);
