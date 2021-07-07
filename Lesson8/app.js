@@ -38,3 +38,10 @@ console.log(cars);
 
 console.log(cars.pop());//******** */
 console.log(cars);
+
+
+
+// shift() --> ilk elemanı silip, sildiği elemanı döndürür
+
+console.log(cars.shift());
+console.log(cars);
