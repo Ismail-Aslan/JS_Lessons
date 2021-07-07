@@ -17,3 +17,8 @@ console.log(cars2);
 
 console.log(cars2.length);
 
+// concat() method --> arrayleri birleştirir.
+
+console.log(cars.concat(cars2,'Mercedes',2021));
+console.log(cars+cars2); //string olarak işlem yapıyor
+
