@@ -67,3 +67,10 @@ console.log(cars.splice(1,1,'VW'));
 console.log(cars);
 console.log(cars.splice(1,0,'BMW'));
 console.log(cars);
+
+
+// slice() --> orjinal arrayi bozmadan yeni array üretir
+
+console.log(cars);
+console.log(cars.slice(1,3));
+console.log(cars.slice(-3,3));
