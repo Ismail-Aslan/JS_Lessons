@@ -98,3 +98,47 @@ console.log(cars.indexOf('DDD',2));
 
 console.log(cars.lastIndexOf('VW'));
 console.log(cars.lastIndexOf('VW',2));
+
+
+console.log(cars);
+const [x,y,z] = cars
+console.log(x,y,z);
+const [t,...others] = cars;
+console.log(others);
+console.log(Array.isArray(others));
+console.log(others instanceof Array);
+
+
+
+
+let a = 5;
+let d = 6;
+
+console.log(a,d);
+ [a,d] = [d,a]
+ console.log(a,d);
+
+
+
+ //Array iterations *****************************************************************************************
+
+ for (let i = 0; i < cars.length; i++) {//empty' i undefined döndürür
+     const element = cars[i];
+     console.log(element);
+     
+ }
+
+ for (i of cars){ //empty' i undefined döndürür
+     console.log(i);
+ }
+
+ for (const i in cars) {//empty'i görmez
+     
+         const element = cars[i];
+         console.log(element);
+     
+ }
+
+ cars.forEach(element => { //empty'i görmez
+     console.log(element);
+ });
