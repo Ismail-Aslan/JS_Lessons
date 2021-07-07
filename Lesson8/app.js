@@ -22,3 +22,11 @@ console.log(cars2.length);
 console.log(cars.concat(cars2,'Mercedes',2021));
 console.log(cars+cars2); //string olarak işlem yapıyor
 
+
+
+//sort() method---> herşeyi string olarak değerlendirir örn: "21">"133"*****çözüm yolu aşağıda
+
+
+console.log([1,52,21,13,255].sort());
+console.log([1,52,21,13,255].sort(function(a,b){return a-b}));//sayılarla ilgili sıkıntıyı çözüyor
+
