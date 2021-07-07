@@ -84,3 +84,10 @@ console.log(cars.slice(-3,0)); // sola doğru gitmez, her zaman sağa doğru oku
 console.log(cars);
 console.log(cars.reverse());
 console.log(cars);
+
+
+// indexof() method --> arana elemanı ilk gördüğü indexi döndürür. eğer bulamazsa -1 döndürür. İkinci bir index girilirse o indexten sonrasına bakar
+
+console.log(cars.indexOf('VW'));
+console.log(cars.indexOf('VW',2));
+
