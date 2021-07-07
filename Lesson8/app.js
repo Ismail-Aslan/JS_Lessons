@@ -45,3 +45,25 @@ console.log(cars);
 
 console.log(cars.shift());
 console.log(cars);
+
+//unshift() --> en başa ekler.
+
+console.log(cars.unshift('VW'));
+console.log(cars);
+
+
+/********************************************* */
+const cars3 = ['Audi','Opel', 'Fiat'];
+cars3[6] = 'VW';
+console.log(cars3);
+console.log(cars3[3]);
+
+/********************************************* */
+
+// splice() method --> arraye yeni elemanlar eklemek yada çıkarmak için kullanılır; sildiklerini döndürür
+
+console.log(cars);
+console.log(cars.splice(1,1,'VW'));
+console.log(cars);
+console.log(cars.splice(1,0,'BMW'));
+console.log(cars);
