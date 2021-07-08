@@ -127,3 +127,25 @@ console.log(jsPrg);
 jsPrg.style.color ='green';
 jsPrg.style.backgroundColor = 'red';
 jsPrg.style.fontSize = '2rem'
+
+
+
+///////////////////////////////////////
+
+const cwBanner = document.getElementById('cw-banner');
+console.log(cwBanner);
+
+console.log(cwBanner.classList);
+cwBanner.classList.add('imp');
+cwBanner.classList.remove('banner');
+
+
+//////////////////////////////////
+
+const cwQuote = document.querySelector('#quote-div');
+console.log(cwQuote);
+
+cwElm = document.createElement('h3');//sadece eleman oluşturur
+console.log(cwElm);
+cwElm.innerText = 'Clarusway';
+cwQuote.appendChild(cwElm);//html e eklemek için appendchild yapmak gerekiyor
