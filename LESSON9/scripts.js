@@ -101,3 +101,29 @@ console.log(mdnHrefAttr);
 
 mdn.setAttribute('href','https://www.w3schools.com/');
 mdn.innerText = "w3schools";
+
+
+////challange --->>>> en sona eklenen listede frontend yazanları kırmızı yap
+
+const insElm = document.querySelectorAll('#instructors li');
+console.log(insElm);
+
+insElm.forEach((item) => {
+    console.log(item.innerText.includes('FrontEnd'));
+    if (item.innerText.includes('FrontEnd')) {
+        item.setAttribute('style','color:red')
+    }
+    if (item.innerText.includes('BackEnd')) {
+        item.setAttribute('class','back-end')
+    }
+});
+
+
+
+//////////////////////////////////
+
+const jsPrg = document.querySelector('#js-prg');
+console.log(jsPrg);
+jsPrg.style.color ='green';
+jsPrg.style.backgroundColor = 'red';
+jsPrg.style.fontSize = '2rem'
