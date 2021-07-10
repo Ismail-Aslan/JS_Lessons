@@ -23,10 +23,10 @@
           id="logo"
         />
         <ul class="nav__links">
-          <li class="nav__item">
+          <li class="nav__item" >
             <a class="nav__link" href="#section--1">Features</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item" onclick="alert('inline');alert('inline2')">
             <a class="nav__link" href="#section--2">Operations</a>
           </li>
           <li class="nav__item">
@@ -350,5 +350,98 @@
     <div class="overlay hidden"></div>
 
     <script src="script.js"></script>
+
+    <script>
+       const navbarItem1 = document.getElementsByClassName("nav__item")[0];
+       console.log(navbarItem1);
+       const navbarItem2 = document.getElementsByClassName("nav__item")[1];
+       console.log(navbarItem2);
+       const navbarItem3 = document.getElementsByClassName("nav__item")[2];
+       console.log(navbarItem3);
+
+/////////////////////////////////////////////////////////////////////////
+
+
+       const h1 = document.querySelector("h1")
+       console.log(h1);
+
+       /* const highlightSpan = h1.querySelectorAll(".highlight");
+       console.log(highlightSpan);
+       h1.firstElementChild.style.color = "red";
+       h1.lastElementChild.style.color = "blue"; */
+
+//////////////////////////////////////////////////////////////////////////
+
+      // h1.closest(".header").style.backgroundColor = "yellow";
+
+
+///////////////////////////////////////////////////////////////////////////
+
+
+
+
+      //..........EVENTS........
+
+
+      // window.onload = () => {alert("Welcome!")};
+      // window.addEventListener("load",() => {alert("Welcome!")});
+
+
+
+      navbarItem1.onclick = () => {alert("onclick")};
+      //navbarItem2 için inline eklendi
+      navbarItem1.addEventListener("click",function () {
+        alert('eventListener')
+      });
+
+
+      
+
+      // navbarItem2.addEventListener("mouseover",() => alert('over me'));
+      navbarItem2.addEventListener("mouseenter",() => {navbarItem2.textContent="Over me"});
+      navbarItem2.addEventListener("mouseout",() => {navbarItem2.innerText="Operations"});
+
+
+
+
+      const randomNumber = () => {
+        return Math.floor(Math.random()*255);
+      }
+      const randomColor = () => {
+        return `rgb(${randomNumber()},${randomNumber()},${randomNumber()})`;
+      }
+      const changeBackgroundColor = () => {
+         navbarItem3.style.backgroundColor = randomColor();
+      };
+
+      navbarItem3.addEventListener("mouseenter",changeBackgroundColor);
+      // navbarItem3.removeEventListener("mouseenter",changeBackgroundColor);
+
+
+//****************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+
+      //sayfa içerisinde ilgili bölüme kayarak götüren kod bloğu
+      
+      document.querySelectorAll('.nav__link');
+      console.log(document.querySelectorAll('.nav__link'));
+      document.querySelectorAll('.nav__link').forEach(
+        function (elements) {
+          elements.addEventListener("click",function (element) {
+            element.preventDefault();
+            const sectionId = this.getAttribute("href");
+            document.querySelector(sectionId).scrollIntoView({
+              behavior :"smooth"
+            });
+          });
+          
+        }
+      );
+      
+
+//***************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+
+    </script>
   </body>
 </html>
