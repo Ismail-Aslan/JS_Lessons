@@ -10,3 +10,4 @@ registrationform.addEventListener("submit",function (e) {
 
 
 const lastNameInput = document.getElementsByName("last_name")[0];
+const remainCharSpan = document.getElementById("charCount")
