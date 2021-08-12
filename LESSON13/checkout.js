@@ -29,15 +29,30 @@ document.getElementById('customer-form').addEventListener("submit",function (eve
 
 
 
-    const name = this.getElementById("name");
-    const price = this.getElementById("price");
-    const quantity = this.getElementById("quantity");
+    const name = this.querySelector("#name");
+    const price = this.querySelector("#price");
+    const quantity = this.querySelector("#quantity");
     const product = new Product(name.value,price.value,quantity.value);
     const display = new Display();
-    console.log(display);
-    console.log(product);
+    
+    // display.clearFields();
+    display.showLoading(product);
 
-})
+});
+
+Display.prototype.showLoading = function (product) {
+    const loading = document.querySelector(".loading");
+    loading.style.display="block";
+    console.log("showLoading's this");
+    console.log(this);
+
+    const displayObj = this;
+    setTimeout(() => {
+        loading.style.display= "none";
+        displayObj.addProduct(product);
+    }, 3000);
+}
+
 
 
 
