@@ -6,6 +6,55 @@
 // const lastname = urlParams.get("lastname");
 // alert("welcome " + firstname + " " + lastname);
 
+
+
+
+function Product(name, price, quantity) {
+    console.log("product");
+    console.log(this);
+    this.name = name;
+    this.price = price;
+    this.quantity = quantity;
+}
+console.log(this);
+
+
+function Display() {
+    console.log(display);
+    console.log(this);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const updateProductQuantity = (input) => {
     alert(input.value);
 }
