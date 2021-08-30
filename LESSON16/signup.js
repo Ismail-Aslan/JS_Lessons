@@ -49,7 +49,7 @@ const fillFormInput = () => {
 
 // ****************FETCH***************
 
-const apiRegister = () => {
+const apiRegister = async () => {
     let email = localStorage.getItem("email");
     let password = document.getElementById("password").value;
 
@@ -57,7 +57,7 @@ const apiRegister = () => {
         email: email,
         password: password
     }
-    fetch("https://reqres.in/api/register",{
+    await fetch("https://reqres.in/api/register",{
         method:"POST",
         headers:{
             "Content-Type" : "application/json"
