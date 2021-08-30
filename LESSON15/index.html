@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let x;
+        function setTimeoutF(limit) {
+            let seconds = 1
+            x = () => {
+                    setTimeout(() => {
+                    console.log(seconds,"saniye geçti");
+                    seconds++;
+                    
+                    if (seconds <= limit) {
+                        x();
+                        
+                    }
+                   
+                }, 1000);
+            }
+            x();
+        }
+
+        setTimeoutF(3);
+    </script> -->
+    <script>
+        let counter = 0;
+        function countSeconds(limit){
+            counter++;
+            console.log(counter, "saniye geçti");
+            if (counter < limit) {
+                setTimeout(countSeconds, 1000,limit);
+            }   
+        }
+        countSeconds(4); 
+    </script>
+</body>
+</html>
