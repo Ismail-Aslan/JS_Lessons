@@ -98,3 +98,7 @@ const apiRegister = async () => {
         console.log(data.data);//data.data kullanmak gerekiyor
     }
 }
+
+
+
+
