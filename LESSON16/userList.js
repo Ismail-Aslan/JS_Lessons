@@ -1,7 +1,11 @@
-$(document).ready(function () {
-    setTimeout(getUserList, 0);
-})
+// $(document).ready(function () {
+//     setTimeout(getUserList, 0);
+// })
 
+$(document).ready(function () {
+    setTimeout(getApiUserList, 1000);
+    // setInterval(getApiUserList, 5000);
+})
 // ****************GET**************************
 
 
@@ -92,62 +96,93 @@ $(document).ready(function () {
 
 
 
-const getUserList = () => {
-    $.ajax({
-        type: "GET",
+// const getUserList = () => {
+//     $.ajax({
+//         type: "GET",
+//         url: "https://reqres.in/api/users?page=1",
+//         dataType: 'json',
+//         success: function (data) {
+//             if (data != "") {
+//                 for (var i = 0; i < data.data.length; i++) {
+//                         $('#tbodyUserList').append(
+//                             `<tr>
+//                                     <td>
+//                                         <img src="${data.data[i].avatar}"/>
+//                                     </td>
+//                                     <td>
+//                                         ${data.data[i].id}
+//                                     </td>
+//                                     <td>
+//                                         ${data.data[i].email}
+//                                     </td>
+//                                     <td>
+//                                         ${data.data[i].first_name}
+//                                     </td>
+//                                     <td>
+//                                         ${data.data[i].first_name}
+//                                     </td>
+//                             </tr>`);
+//                 }
+//             }
+//             else {
+//                 console.log("getApiUserList ajax send request nodata");
+//             }
+//         },
+//         beforeSend: function (request) {
+//             // request.setRequestHeader("token", localStorage.getItem("token"));
+//             document.getElementById("loading").style.display = "block";
+//             // console.log("getApiUserList ajax send request before");
+//         },
+//         complete: function () {
+//             console.log("getApiUserList ajax send request finished");
+//             document.getElementById("loading").style.display = "none";
+
+//         },
+//         error: function (XMLHttpRequest, textStatus, errorThrown) {
+//             document.getElementById("loading").style.display = "none";
+//             // postErrorLog("app-" + window.location.pathname, XMLHttpRequest.responseText, XMLHttpRequest.status, textStatus, errorThrown);
+
+//             if (XMLHttpRequest.readyState == 4) {
+//                 // HTTP error (can be checked by XMLHttpRequest.status and XMLHttpRequest.statusText)
+//             }
+//             else if (XMLHttpRequest.readyState == 0) {
+
+//             }
+//             else {
+//                 // network problem
+//             }
+
+//         }
+//     });
+// }
+
+//************DATA TABLE**************** */
+
+
+
+const getApiUserList = () => {
+    $("#example").DataTable({
+      ajax: {
         url: "https://reqres.in/api/users?page=1",
-        dataType: 'json',
-        success: function (data) {
-            if (data != "") {
-                for (var i = 0; i < data.data.length; i++) {
-                        $('#tbodyUserList').append(
-                            `<tr>
-                                    <td>
-                                        <img src="${data.data[i].avatar}"/>
-                                    </td>
-                                    <td>
-                                        ${data.data[i].id}
-                                    </td>
-                                    <td>
-                                        ${data.data[i].email}
-                                    </td>
-                                    <td>
-                                        ${data.data[i].first_name}
-                                    </td>
-                                    <td>
-                                        ${data.data[i].first_name}
-                                    </td>
-                            </tr>`);
-                }
-            }
-            else {
-                console.log("getApiUserList ajax send request nodata");
-            }
+        dataSrc: "data",
+      },
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json; charset=utf-8",
+      columns: [
+  
+        {
+          data: "id",
         },
-        beforeSend: function (request) {
-            // request.setRequestHeader("token", localStorage.getItem("token"));
-            document.getElementById("loading").style.display = "block";
-            // console.log("getApiUserList ajax send request before");
+        {
+          data: "email",
         },
-        complete: function () {
-            console.log("getApiUserList ajax send request finished");
-            document.getElementById("loading").style.display = "none";
-
+        {
+          data: "first_name",
         },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
-            document.getElementById("loading").style.display = "none";
-            // postErrorLog("app-" + window.location.pathname, XMLHttpRequest.responseText, XMLHttpRequest.status, textStatus, errorThrown);
-
-            if (XMLHttpRequest.readyState == 4) {
-                // HTTP error (can be checked by XMLHttpRequest.status and XMLHttpRequest.statusText)
-            }
-            else if (XMLHttpRequest.readyState == 0) {
-
-            }
-            else {
-                // network problem
-            }
-
-        }
+        {
+          data: "last_name",
+        },
+      ],
     });
-}
+  }
