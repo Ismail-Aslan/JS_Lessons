@@ -49,28 +49,52 @@ const fillFormInput = () => {
 
 // ****************FETCH***************
 
+// const apiRegister = async () => {
+//     let email = localStorage.getItem("email");
+//     let password = document.getElementById("password").value;
+
+//     const bodyData = {
+//         email: email,
+//         password: password
+//     }
+//     await fetch("https://reqres.in/api/register",{
+//         method:"POST",
+//         headers:{
+//             "Content-Type" : "application/json"
+//         },
+//         body: JSON.stringify(bodyData)
+//     }).then((response) => {
+//         return response.json();
+//     }).then((data) => {
+//         if (data.id != "0") {
+//             console.log(data);
+//             alert("Welcome " + email.split("@")[0])
+//         }
+//     }).catch((err) => {
+//         console.log(err);
+//     });
+// }
+
+
+
+//****************AXIOS************************
+
+
 const apiRegister = async () => {
     let email = localStorage.getItem("email");
     let password = document.getElementById("password").value;
 
-    const bodyData = {
-        email: email,
-        password: password
-    }
-    await fetch("https://reqres.in/api/register",{
-        method:"POST",
-        headers:{
-            "Content-Type" : "application/json"
-        },
-        body: JSON.stringify(bodyData)
-    }).then((response) => {
-        return response.json();
-    }).then((data) => {
-        if (data.id != "0") {
-            console.log(data);
-            alert("Welcome " + email.split("@")[0])
+    const data = await axios({
+        url:"https://reqres.in/api/register",
+        method: "POST",
+        data: {
+            email: email,
+            password: password
         }
-    }).catch((err) => {
-        console.log(err);
-    });
+    })
+
+    if (data.data.id != "0") {
+        console.log(data);
+        console.log(data.data);//data.data kullanmak gerekiyor
+    }
 }
